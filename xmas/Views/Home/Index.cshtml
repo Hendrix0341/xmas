@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@model xmas.Models.UserModel
+
+<div class="container">
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+    {
+        <label>Username</label>
+        @Html.TextBoxFor(m => m.UserName, new { Class = "form-control" })
+        <label for="pwd">Password:</label>
+        @Html.PasswordFor(m => m.Password, new { Class = "form-control" })
+        <input type="submit" value="Login" class="btn-primary" style="width:150px; height:40px; border-radius:3px; margin-top:10px;" />
+    }
+
+    <div class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

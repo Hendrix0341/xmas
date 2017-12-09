@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <div style="float:left">
+        <h2 style="margin-top:0px !important">Hello @Session["Username"]</h2>
+        <input type="text" id="" placeholder="Filter" Class="form-control" />
+    </div>
+    <div style="float:right;">
+        <button class="btn btn-primary">Product toevoegen</button>
+    </div>
+    <div style="clear:both;"></div>
+    <hr />
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Persoon</th>
+                <th>Artikel</th>
+                <th>URL</th>
+                <th>Is gekocht</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Laura G.</td>
+                <td>XXL Dilo</td>
+                <td>sexshop.nl/dildo-XXl</td>
+                <td><input type="checkbox" />  <button class="btn btn-primary">Reserveer</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
